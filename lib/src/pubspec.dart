@@ -229,7 +229,7 @@ class Pubspec {
     // TODO: Log whether we're replacing an existing dependency or adding a new one, and all dependency metadata.
     String depSourceDescription;
     if(dep.source == 'hosted') {
-      depSourceDescription = "'${dep.constraint}'";
+      depSourceDescription = "${dep.constraint}";
       if (dep.constraint.toString().startsWith('^')) addingCaret = true;
       if(dep.description is Map) {
         // TODO: Implement for hosted dep map descriptions as well.
